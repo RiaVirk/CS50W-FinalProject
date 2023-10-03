@@ -10,5 +10,5 @@ class MovieList(ListView):
     # template_name = ""
 
 
-class movieDetail(DetailView):
+class MovieDetail(DetailView):
     model = Movie
