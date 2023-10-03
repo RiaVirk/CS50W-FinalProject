@@ -4,20 +4,20 @@ from django.db import models
 
 CATEGORY_CHOICES = (
     ('A', 'ACTION'),
-    ('D', 'DRAMA')
-    ('C', 'COMEDY')
-    ('R', 'ROMANCE')
+    ('D', 'DRAMA'),
+    ('C', 'COMEDY'),
+    ('R', 'ROMANCE'),
 )
 
 LANGUAGE_CHOICES = (
-    ('EN', 'ENGLISH')
-    ('GR', 'GERMAN')
+    ('EN', 'ENGLISH'),
+    ('GR', 'GERMAN'),
 )
 
 STATUS_CHOICES = (
-    ('RA', 'RECENTLY ADDED')
-    ('MW', 'MOST WATCHED')
-    ('TR', 'TOP RATED')
+    ('RA', 'RECENTLY ADDED'),
+    ('MW', 'MOST WATCHED'),
+    ('TR', 'TOP RATED'),
 )
 
 
@@ -30,3 +30,6 @@ class Movie(models.Model):
     status = models.CharField(choices=STATUS_CHOICES, max_length=2)
     year_of_production = models.DateField()
     views_count = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.title
