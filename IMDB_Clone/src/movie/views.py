@@ -6,7 +6,7 @@ from .models import Movie
 
 
 class MovieList(ListView):
-    model = ModelName
+    model = Movie
     # template_name = ""
 
 
